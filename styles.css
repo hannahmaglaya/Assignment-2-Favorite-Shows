@@ -1,0 +1,89 @@
+body {
+      background-color: #0b0b0b;
+      color: #e0e0e0;
+      font-family: 'Share Tech Mono', monospace;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      padding: 60px 20px;
+      color: rgb(195, 228, 117);
+      font-family: 'Libre Baskerville', cursive;
+      font-size: 40px;
+      text-shadow: 2px 2px black;
+    }
+
+    section {
+      padding: 40px 20px;
+      border-bottom: 1px solid #333;
+    }
+
+    h2 {
+      font-family: 'Libre Baskerville', cursive;
+      font-size: 2.5rem;
+      color: crimson;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .show {
+      margin-bottom: 40px;
+    }
+
+    .quote {
+      font-style: italic;
+      color: #aaa;
+    }
+
+    .visuals {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .poster {
+      position: relative;
+      display: inline-block;
+      margin: 10px;
+    }
+
+    .poster img {
+      width: 150px;
+      height: 500px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .poster:hover img {
+      transform: scale(1.05);
+    }
+
+    .poster .title {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.7);
+      color: crimson;
+      font-family: 'HANDMADE';
+      font-size: 20px;
+      padding: 5px 10px;
+      border-radius: 10px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    .poster:hover .title {
+      opacity: 1;
+    }
+    .sampleclass{
+      
+    }
