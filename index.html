@@ -1,11 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hannah's Watchlist</title>
-    <link rel="stylesheet" href="./css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hannah's Watchlist</title>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #0b0b0b;
+      color: #e0e0e0;
+      font-family: 'Share Tech Mono', monospace;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      padding: 60px 20px;
+      color: rgb(195, 228, 117);
+      font-family: 'Libre Baskerville', cursive;
+      font-size: 40px;
+      text-shadow: 2px 2px black;
+    }
+
+    section {
+      padding: 40px 20px;
+      border-bottom: 1px solid #333;
+    }
+
+    h2 {
+      font-family: 'Libre Baskerville', cursive;
+      font-size: 2.5rem;
+      color: crimson;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .show {
+      margin-bottom: 40px;
+    }
+
+    .quote {
+      font-style: italic;
+      color: #aaa;
+    }
+
+    .visuals {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .poster {
+      position: relative;
+      display: inline-block;
+      margin: 10px;
+    }
+
+    .poster img {
+      width: 150px;
+      height: 500px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .poster:hover img {
+      transform: scale(1.05);
+    }
+
+    .poster .title {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.7);
+      color: crimson;
+      font-family: 'HANDMADE';
+      font-size: 20px;
+      padding: 5px 10px;
+      border-radius: 10px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    .poster:hover .title {
+      opacity: 1;
+    }
+  </style>
 </head>
 <body>
 
@@ -14,51 +101,40 @@
   <section class="visuals">
     <h2>2025</h2>
     <div class="poster">
-        <a href="#first-show">
-            <img src="Demon Slayer 1.jpg" alt="Demon Slayer">
-            <span class="title">Demon Slayer</span>
-        </a>
+      <a href="#demon-slayer">
+        <img src="Demon Slayer 1.jpg" alt="Demon Slayer" />
+        <span class="title">Demon Slayer</span>
+      </a>
     </div>
     <div class="poster">
-      <img src="One Piece 1.jpg" alt="One Piece">
+      <img src="One Piece 1.jpg" alt="One Piece" />
       <span class="title">One Piece</span>
     </div>
     <div class="poster">
-      <img src="Squid Game.jpg" alt="Squid Game">
+      <img src="Squid Game.jpg" alt="Squid Game" />
       <span class="title">Squid Game</span>
     </div>
-        <div class="poster">
-      <img src="Stranger things 1.jpg" alt="Stranger Things">
-      <span class="title">STranger Things</span>
+    <div class="poster">
+      <img src="Stranger things 1.jpg" alt="Stranger Things" />
+      <span class="title">Stranger Things</span>
     </div>
-        <div class="poster">
-      <img src="Breaking Bad 1.jpg" alt="Breaking Bad">
+    <div class="poster">
+      <img src="Breaking Bad 1.jpg" alt="Breaking Bad" />
       <span class="title">Breaking Bad</span>
     </div>
   </section>
 
-  <section id="first-show">
-    <h2>Stranger Things</h2>
+  <section id="demon-slayer">
+    <h2>Demon Slayer</h2>
     <div class="show">
-      <img src="Demon Slayer 2" alt="Demon Slayer">
-      <p>Demon Slayer: Season 3 follows Tanjiro Kamado as he journeys to the Swordsmith Village to repair his blade and train for future battles. He teams up with Mist Hashira Muichiro Tokito and Love Hashira Mitsuri Kanroji to face off against powerful Upper Rank demons. Amid intense fights and emotional revelations, Tanjiro uncovers deeper truths about his heritage and the strength of his bond with Nezuko
-</p>
+      <img src="Demon Slayer 2.jpg" alt="Demon Slayer Season 3" />
+      <p><strong>Season 3:</strong> Tanjiro Kamado journeys to the Swordsmith Village to repair his blade and train for battles. Teaming with Mist Hashira Muichiro Tokito and Love Hashira Mitsuri Kanroji, he faces Upper Rank demons while discovering deeper truths about his heritage and bond with Nezuko.</p>
       <p class="quote">“Friends don’t lie.”</p>
     </div>
+  </section>
 
+  <section id="other-shows">
     <h2>Only Murders in the Building</h2>
-    <div class="show">
-      <p>Podcast dreams, vintage style, and apartment secrets blend into a comedy-thriller cocktail.</p>
-      <p class="quote">“Who doesn’t love a good murder?”</p>
-    </div>
-
-        <h2>Only Murders in the Building</h2>
-    <div class="show">
-      <p>Podcast dreams, vintage style, and apartment secrets blend into a comedy-thriller cocktail.</p>
-      <p class="quote">“Who doesn’t love a good murder?”</p>
-    </div>
-
-        <h2>Only Murders in the Building</h2>
     <div class="show">
       <p>Podcast dreams, vintage style, and apartment secrets blend into a comedy-thriller cocktail.</p>
       <p class="quote">“Who doesn’t love a good murder?”</p>
@@ -71,7 +147,5 @@
     </div>
   </section>
 
-
-  
 </body>
 </html>
