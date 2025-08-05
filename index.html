@@ -62,4 +62,81 @@
       position: absolute;
       bottom: 10px;
       left: 50%;
-      transform: translateX(-50
+      transform: translateX(-50%);
+      background: #000000;
+      color: crimson;
+      font-size: 16px;
+      padding: 4px 8px;
+      border-radius: 6px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    .poster:hover .title {
+      opacity: 1;
+    }
+
+    .show-list {
+      display: inline-block;
+      text-align: left;
+      font-size: 18px;
+      margin: 40px auto 60px auto;
+      line-height: 1.6;
+    }
+
+    .show-list ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+
+    .show-list li {
+      margin-bottom: 20px;
+    }
+
+    .show-list span {
+      font-weight: bold;
+      color: crimson;
+    }
+  </style>
+</head>
+<body>
+
+  <header>HANNAH'S WATCHLIST</header>
+
+  <h2>2025</h2>
+  <div class="visuals">
+    <div class="poster">
+      <img src="Demon Slayer 1.jpg" alt="Demon Slayer">
+      <div class="title">Demon Slayer</div>
+    </div>
+    <div class="poster">
+      <img src="One Piece 1.jpg" alt="One Piece">
+      <div class="title">One Piece</div>
+    </div>
+    <div class="poster">
+      <img src="Squid Game.jpg" alt="Squid Game">
+      <div class="title">Squid Game</div>
+    </div>
+    <div class="poster">
+      <img src="Stranger things 1.jpg" alt="Stranger Things">
+      <div class="title">Stranger Things</div>
+    </div>
+    <div class="poster">
+      <img src="Breaking Bad 1.jpg" alt="Breaking Bad">
+      <div class="title">Breaking Bad</div>
+    </div>
+  </div>
+
+  <div class="show-list">
+    <ul>
+      <li><span>Demon Slayer:</span> Tanjiro and Nezuko face powerful Upper Rank demons in the Swordsmith Village alongside Mist and Love Hashira.</li>
+      <li><span>One Piece:</span> Monkey D. Luffy sails the Grand Line in search of the legendary treasure, battling foes with wild pirate energy.</li>
+      <li><span>Squid Game:</span> Desperate contestants risk their lives in deadly children’s games for a massive cash prize in this psychological thriller.</li>
+      <li><span>Stranger Things:</span> Supernatural forces turn small-town Indiana upside down as a group of kids uncover government secrets and monsters.</li>
+      <li><span>Breaking Bad:</span> A chemistry teacher becomes a ruthless drug kingpin in a gripping spiral of crime, family, and moral collapse.</li>
+    </ul>
+  </div>
+
+</body>
+</html>
