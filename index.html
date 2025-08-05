@@ -5,7 +5,7 @@
   <title>Hannah's Watchlist</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Google Fonts: Bebas Neue, Share Tech Mono, GFS Didot -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Share+Tech+Mono&family=GFS+Didot&display=swap" rel="stylesheet">
 
   <style>
@@ -17,10 +17,14 @@
       text-align: center;
     }
 
+    a {
+      text-decoration: none;
+    }
+
     header {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 70px;
-      color: #70ABAF     
+      color: #70ABAF;
       padding: 50px 0px;
       letter-spacing: 2px;
     }
@@ -28,7 +32,7 @@
     h2 {
       font-family: 'GFS Didot', serif;
       font-size: 36px;
-      color: F0F7F4;
+      color: #F0F7F4;
       margin: 30px 0px;
     }
 
@@ -90,14 +94,12 @@
       margin-bottom: 40px;
     }
 
-  .thumb {
-    width: 440px;
-    height: 500px;
-    object-fit: cover;
-    flex-shrink: 0;
-    display: block;
-}
-
+    .thumb {
+      width: 440px;
+      height: 500px;
+      object-fit: cover;
+      flex-shrink: 0;
+      display: block;
     }
 
     .entry p {
@@ -110,7 +112,7 @@
       color: crimson;
     }
 
-    .media (max-width: 600px) {
+    @media (max-width: 600px) {
       .entry {
         flex-direction: column;
         align-items: flex-start;
@@ -127,51 +129,56 @@
 
   <header>HANNAH'S 2025 WATCHLIST</header>
   <div class="visuals">
-    <a href="#demon"> 
-    <div class="poster">
-      <img src="Demon Slayer 1.jpg" alt="Demon Slayer">
-      <div class="title">Demon Slayer</div>
-    </div>
+    <a href="#demon">
+      <div class="poster">
+        <img src="Demon Slayer 1.jpg" alt="Demon Slayer">
+        <div class="title">Demon Slayer</div>
+      </div>
+    </a>
     <a href="#one">
-    <div class="poster">
-      <img src="One piece 2.jpg" alt="One Piece">
-      <div class="title">One Piece</div>
-    </div>
-     <a href="#squid"> 
-    <div class="poster">
-      <img src="Squid Game.jpg" alt="Squid Game">
-      <div class="title">Squid Game</div>
-    </div>
-    <a href="#strange"> 
-    <div class="poster">
-      <img src="Stranger things 1.jpg" alt="Stranger Things">
-      <div class="title">Stranger Things</div>
-    </div>
-    <a href="#break"> 
-    <div class="poster">
-      <img src="Breaking Bad 1.jpg" alt="Breaking Bad">
-      <div class="title">Breaking Bad</div>
-    </div>
+      <div class="poster">
+        <img src="One piece 2.jpg" alt="One Piece">
+        <div class="title">One Piece</div>
+      </div>
+    </a>
+    <a href="#squid">
+      <div class="poster">
+        <img src="Squid Game.jpg" alt="Squid Game">
+        <div class="title">Squid Game</div>
+      </div>
+    </a>
+    <a href="#strange">
+      <div class="poster">
+        <img src="Stranger things 1.jpg" alt="Stranger Things">
+        <div class="title">Stranger Things</div>
+      </div>
+    </a>
+    <a href="#break">
+      <div class="poster">
+        <img src="Breaking Bad 1.jpg" alt="Breaking Bad">
+        <div class="title">Breaking Bad</div>
+      </div>
+    </a>
   </div>
 
   <div class="show-list">
-    <div class="entry" id="#demon">
+    <div class="entry" id="demon">
       <img src="Demon Slayer 2.jpg" alt="Demon Slayer" class="thumb">
       <p><span>Demon Slayer:</span> Tanjiro and Nezuko face powerful Upper Rank demons in the Swordsmith Village alongside Mist and Love Hashira.</p>
     </div>
-    <div class="entry" id="#one">
+    <div class="entry" id="one">
       <img src="One piece 2.jpg" alt="One Piece" class="thumb">
       <p><span>One Piece:</span> Monkey D. Luffy sails the Grand Line in search of the legendary treasure, battling foes with wild pirate energy.</p>
     </div>
-    <div class="entry" id="#squid">
+    <div class="entry" id="squid">
       <img src="squidgame2.jpg" alt="Squid Game" class="thumb">
       <p><span>Squid Game:</span> Desperate contestants risk their lives in deadly children’s games for a massive cash prize in this psychological thriller.</p>
     </div>
-    <div class="entry" id="#strange">
+    <div class="entry" id="strange">
       <img src="STranger things 2.jpg" alt="Stranger Things" class="thumb">
       <p><span>Stranger Things:</span> Supernatural forces turn small-town Indiana upside down as a group of kids uncover government secrets and monsters.</p>
     </div>
-    <div class="entry" id="#break">
+    <div class="entry" id="break">
       <img src="Breaking Bad 2.jpg" alt="Breaking Bad" class="thumb">
       <p><span>Breaking Bad:</span> A chemistry teacher becomes a ruthless drug kingpin in a gripping spiral of crime, family, and moral collapse.</p>
     </div>
@@ -179,14 +186,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
