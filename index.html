@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Hannah's Watchlist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Share Tech Mono and GFS Didot from Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=GFS+Didot&display=swap" rel="stylesheet">
+  <!-- Google Fonts: Bebas Neue, Share Tech Mono, GFS Didot -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Share+Tech+Mono&family=GFS+Didot&display=swap" rel="stylesheet">
 
   <style>
     body {
@@ -17,11 +18,12 @@
     }
 
     header {
-      font-family: 'GFS Didot', serif;
-      font-size: 45px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 55px;
       color: crimson;
       padding: 50px 0px;
       text-shadow: -6px 2px 0px #000000;
+      letter-spacing: 2px;
     }
 
     h2 {
@@ -78,25 +80,47 @@
     }
 
     .show-list {
-      display: inline-block;
-      text-align: left;
-      font-size: 18px;
+      max-width: 800px;
       margin: 40px auto 60px auto;
+      padding: 0 20px;
+      text-align: left;
+    }
+
+    .entry {
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .thumb {
+      width: 120px;
+      height: 180px;
+      object-fit: cover;
+      margin-right: 20px;
+      box-shadow: -6px 0px 0px #000000;
+      border-radius: 8px;
+    }
+
+    .entry p {
+      font-size: 18px;
       line-height: 1.6;
     }
 
-    .show-list ul {
-      list-style-type: square;
-      padding-left: 20px;
-    }
-
-    .show-list li {
-      margin-bottom: 20px;
-    }
-
-    .show-list span {
+    .entry span {
       font-weight: bold;
       color: crimson;
+    }
+
+    @media (max-width: 600px) {
+      .entry {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .thumb {
+        margin-bottom: 10px;
+        margin-right: 0;
+      }
     }
   </style>
 </head>
@@ -129,13 +153,26 @@
   </div>
 
   <div class="show-list">
-    <ul>
-      <li><span>Demon Slayer:</span> Tanjiro and Nezuko face powerful Upper Rank demons in the Swordsmith Village alongside Mist and Love Hashira.</li>
-      <li><span>One Piece:</span> Monkey D. Luffy sails the Grand Line in search of the legendary treasure, battling foes with wild pirate energy.</li>
-      <li><span>Squid Game:</span> Desperate contestants risk their lives in deadly children’s games for a massive cash prize in this psychological thriller.</li>
-      <li><span>Stranger Things:</span> Supernatural forces turn small-town Indiana upside down as a group of kids uncover government secrets and monsters.</li>
-      <li><span>Breaking Bad:</span> A chemistry teacher becomes a ruthless drug kingpin in a gripping spiral of crime, family, and moral collapse.</li>
-    </ul>
+    <div class="entry">
+      <img src="Demon Slayer 1.jpg" alt="Demon Slayer" class="thumb">
+      <p><span>Demon Slayer:</span> Tanjiro and Nezuko face powerful Upper Rank demons in the Swordsmith Village alongside Mist and Love Hashira.</p>
+    </div>
+    <div class="entry">
+      <img src="One Piece 1.jpg" alt="One Piece" class="thumb">
+      <p><span>One Piece:</span> Monkey D. Luffy sails the Grand Line in search of the legendary treasure, battling foes with wild pirate energy.</p>
+    </div>
+    <div class="entry">
+      <img src="Squid Game.jpg" alt="Squid Game" class="thumb">
+      <p><span>Squid Game:</span> Desperate contestants risk their lives in deadly children’s games for a massive cash prize in this psychological thriller.</p>
+    </div>
+    <div class="entry">
+      <img src="Stranger things 1.jpg" alt="Stranger Things" class="thumb">
+      <p><span>Stranger Things:</span> Supernatural forces turn small-town Indiana upside down as a group of kids uncover government secrets and monsters.</p>
+    </div>
+    <div class="entry">
+      <img src="Breaking Bad 1.jpg" alt="Breaking Bad" class="thumb">
+      <p><span>Breaking Bad:</span> A chemistry teacher becomes a ruthless drug kingpin in a gripping spiral of crime, family, and moral collapse.</p>
+    </div>
   </div>
 
 </body>
