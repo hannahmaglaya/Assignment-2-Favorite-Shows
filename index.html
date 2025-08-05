@@ -1,126 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hannah's Watchlist</title>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+/* Removed mobile-responsive styles */
 
-  <style>
-    @font-face {
-      font-family: 'Climax';
-      src: url('fonts/Climax.woff2') format('woff2'),
-           url('fonts/Climax.woff') format('woff'),
-           url('fonts/Climax.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-    }
+header {
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 60px 20px;
+  color: crimson;
+  font-family: 'Climax', sans-serif;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px #000000;
+}
 
-    body {
-      background-color: #0b0b0b;
-      color: #e0e0e0;
-      font-family: 'Share Tech Mono', monospace;
-      margin: 0;
-      padding: 0;
-    }
+h2 {
+  font-family: 'Climax', sans-serif;
+  font-size: 2rem;
+  color: crimson;
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-    header {
-      background-size: cover;
-      background-position: center;
-      text-align: center;
-      padding: 60px 20px;
-      color: rgb(195, 228, 117);
-      font-family: 'Climax', sans-serif;
-      font-size: 40px;
-      text-shadow: 2px 2px black;
-    }
+.poster img {
+  width: 150px;
+  height: 500px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
 
-    section {
-      padding: 40px 20px;
-      border-bottom: 1px solid #333;
-    }
-
-    h2 {
-      font-family: 'Climax', sans-serif;
-      font-size: 2.5rem;
-      color: crimson;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-
-    .show {
-      margin-bottom: 40px;
-    }
-
-    .quote {
-      font-style: italic;
-      color: #aaa;
-    }
-
-    .visuals {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 40px 20px;
-    }
-
-    .poster {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 10px;
-      position: relative;
-    }
-
-    .poster img {
-      width: 150px;
-      height: 500px;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-
-    .poster:hover img {
-      transform: scale(1.05);
-    }
-
-    .poster .title {
-      position: absolute;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: rgba(0, 0, 0, 0.7);
-      color: crimson;
-      font-family: 'HANDMADE';
-      font-size: 20px;
-      padding: 5px 10px;
-      border-radius: 10px;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      pointer-events: none;
-      text-align: center;
-    }
-
-    .poster:hover .title {
-      opacity: 1;
-    }
-  </style>
-</head>
-<body>
-
-  <header>HANNAH'S WATCH LIST</header>
-
-  <section class="visuals">
-    <h2>2025</h2>
-    <div class="poster">
-      <a href="#demon-slayer">
-        <img src="Demon Slayer 1.jpg" alt="Demon Slayer" />
-        <span class="title">Demon Slayer</span>
-      </a>
-    </div>
-    <div class="poster
+.poster .title {
+  font-size: 18px;
+  padding: 4px 8px;
+}
