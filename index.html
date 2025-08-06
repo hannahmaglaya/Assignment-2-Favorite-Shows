@@ -9,6 +9,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Share+Tech+Mono&family=GFS+Didot&display=swap" rel="stylesheet">
 
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       background: #32292f;
@@ -20,14 +24,17 @@
 
     a {
       text-decoration: none;
+      color: inherit;
     }
 
     header {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: 70px;
-      color: #70ABAF;
-      padding: 50px 0px;
+      font-size: 40px;
+      color: #ffffff;
+      background-color: #70ABAF;
+      padding: 20px 0;
       letter-spacing: 2px;
+      text-align: center;
     }
 
     h2 {
@@ -107,7 +114,7 @@
     .entry p {
       font-size: 18px;
       line-height: 1.6;
-      margin-left: 30px; /* Adds space between image and text */
+      margin-left: 30px;
     }
 
     .entry span {
@@ -136,32 +143,42 @@
 <body>
 
   <header>HANNAH'S 2025 WATCHLIST</header>
+
   <div class="visuals">
-    <div class="poster">
-      <a href="#1">
-      <img src="Demon Slayer 1.jpg" alt="Demon Slayer">
-      <div class="title">Demon Slayer</div>
-    </div>
-    <div class="poster">
-      <img src="One piece 2.jpg" alt="One Piece">
-      <div class="title">One Piece</div>
-    </div>
-    <div class="poster">
-      <img src="Squid Game.jpg" alt="Squid Game">
-      <div class="title">Squid Game</div>
-    </div>
-    <div class="poster">
-      <img src="Stranger things 1.jpg" alt="Stranger Things">
-      <div class="title">Stranger Things</div>
-    </div>
-    <div class="poster">
-      <img src="Breaking Bad 1.jpg" alt="Breaking Bad">
-      <div class="title">Breaking Bad</div>
-    </div>
+    <a href="#demon">
+      <div class="poster">
+        <img src="Demon Slayer 1.jpg" alt="Demon Slayer">
+        <div class="title">Demon Slayer</div>
+      </div>
+    </a>
+    <a href="#one">
+      <div class="poster">
+        <img src="One piece 2.jpg" alt="One Piece">
+        <div class="title">One Piece</div>
+      </div>
+    </a>
+    <a href="#squid">
+      <div class="poster">
+        <img src="Squid Game.jpg" alt="Squid Game">
+        <div class="title">Squid Game</div>
+      </div>
+    </a>
+    <a href="#strange">
+      <div class="poster">
+        <img src="Stranger things 1.jpg" alt="Stranger Things">
+        <div class="title">Stranger Things</div>
+      </div>
+    </a>
+    <a href="#break">
+      <div class="poster">
+        <img src="Breaking Bad 1.jpg" alt="Breaking Bad">
+        <div class="title">Breaking Bad</div>
+      </div>
+    </a>
   </div>
 
   <div class="show-list">
-    <div class="entry" id="#1">
+    <div class="entry" id="demon">
       <img src="Demon Slayer 2.jpg" alt="Demon Slayer" class="thumb">
       <p><span>Demon Slayer:</span> Tanjiro and Nezuko face powerful Upper Rank demons in the Swordsmith Village alongside Mist and Love Hashira.</p>
     </div>
@@ -175,14 +192,4 @@
     </div>
     <div class="entry" id="strange">
       <img src="STranger things 2.jpg" alt="Stranger Things" class="thumb">
-      <p><span>Stranger Things:</span> Supernatural forces turn small-town Indiana upside down as a group of kids uncover government secrets and monsters.</p>
-    </div>
-    <div class="entry" id="break">
-      <img src="Breaking Bad 2.jpg" alt="Breaking Bad" class="thumb">
-      <p><span>Breaking Bad:</span> A chemistry teacher becomes a ruthless drug kingpin in a gripping spiral of crime, family, and moral collapse.</p>
-    </div>
-  </div>
-
-</body>
-</html>
-
+      <p><span>Stranger Things:</span> Supernatural forces turn small-town Indiana upside down as a group of kids uncover government
