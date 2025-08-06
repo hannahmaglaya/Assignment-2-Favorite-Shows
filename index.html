@@ -2,24 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Hannah's Watchlist</title>
+  <title>Hannah's 2025 Watchlist</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Share+Tech+Mono&family=GFS+Didot&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Share+Tech+Mono&family=GFS+Didot&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
+    /* New Netflix-style CSS */
+    :root {
+      --primary-color: #705D56; /* Dark Grey */
+      --secondary-color: #70ABAF; /* Sage Green */
+      --text-color: #F0F7F4; /* Off-white */
+      --dark-color: #32292f;
+      --font-family-netflix: 'Roboto', sans-serif;
+    }
+
+    /* Original Styles with updates */
     html {
       scroll-behavior: smooth;
     }
 
     body {
       margin: 0;
-      background: #32292f;
+      background: var(--dark-color);
       font-family: 'Share Tech Mono', monospace;
-      color: #ffffff;
-      text-align: center;
-      margin-left: 20px;
+      color: var(--text-color);
     }
 
     a {
@@ -27,14 +34,118 @@
       color: inherit;
     }
 
+    /* --- Navbar --- */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 3rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+      z-index: 1000;
+      font-family: var(--font-family-netflix);
+    }
+
+    .logo {
+      color: var(--secondary-color);
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--secondary-color);
+    }
+
+    /* --- Hero Section --- */
+    .hero-section {
+      position: relative;
+      height: 100vh;
+      background: url('https://via.placeholder.com/1920x1080.png?text=Hero+Image') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      padding-left: 5rem;
+      margin-bottom: 40px;
+    }
+
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 50%;
+      font-family: var(--font-family-netflix);
+    }
+
+    .hero-title {
+      font-size: 4rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .hero-description {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .hero-buttons button {
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    .play-button {
+      background-color: var(--text-color);
+      color: var(--primary-color);
+    }
+
+    .list-button {
+      background-color: rgba(109, 109, 110, 0.7);
+      color: var(--text-color);
+    }
+
+    /* Your original styles, slightly updated for color consistency */
     header {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 40px;
-      color: #ffffff;
-      background-color: #70ABAF;
-      padding: 20px 0;
-      letter-spacing: 2px;
-      text-align: center;
+      display: none; /* Hide the old header */
+    }
+
+    h3.section-title {
+      font-family: var(--font-family-netflix);
+      font-size: 2rem;
+      text-align: left;
+      margin-left: 20px;
+      margin-bottom: 20px;
     }
 
     .visuals {
@@ -43,12 +154,13 @@
       flex-wrap: wrap;
       gap: 20px;
       padding: 40px;
+      margin-top: 20px; /* Space from the hero section */
     }
 
     .poster {
       width: 160px;
-      height: 520px;
-      box-shadow: -10px 10px 0px #70ABAF;
+      height: 220px; /* Made the posters shorter to look more like Netflix previews */
+      box-shadow: -10px 10px 0px var(--secondary-color);
       position: relative;
       transition: transform 0.3s ease;
       overflow: hidden;
@@ -99,7 +211,7 @@
 
     .thumb {
       width: 440px;
-      height: 500px;
+      height: 250px; /* Adjusted to be more like a movie preview thumbnail */
       object-fit: cover;
       flex-shrink: 0;
       display: block;
@@ -136,9 +248,31 @@
 </head>
 <body>
 
-  <header>HANNAH'S 2025 WATCHLIST</header>
+  <header class="navbar">
+    <h1 class="logo">Hannah's 2025 Watchlist</h1>
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#shows">My List</a></li>
+        <li><a href="#">TV Shows</a></li>
+        <li><a href="#">Movies</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <div class="visuals">
+  <main class="hero-section" id="hero">
+    <div class="hero-content">
+      <h2 class="hero-title">Welcome Back, Hannah</h2>
+      <p class="hero-description">The ultimate cinematic experience, personalized for you.</p>
+      <div class="hero-buttons">
+        <button class="play-button">▶ Play</button>
+        <button class="list-button">ⓘ More Info</button>
+      </div>
+    </div>
+  </main>
+  
+  <h3 class="section-title">Trending Now</h3>
+  <div class="visuals" id="shows">
     <a href="#demon">
       <div class="poster">
         <img src="Demon Slayer 1.jpg" alt="Demon Slayer">
@@ -171,6 +305,7 @@
     </a>
   </div>
 
+  <h3 class="section-title">Your Full List</h3>
   <div class="show-list">
     <div class="entry" id="demon">
       <img src="Demon Slayer 2.jpg" alt="Demon Slayer" class="thumb">
