@@ -4,40 +4,47 @@
   <meta charset="UTF-8">
   <title>Hannah's Watchlist</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Share+Tech+Mono&family=GFS+Didot&display=swap" rel="stylesheet">
-
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       margin: 0;
       background: #32292f;
       font-family: 'Share Tech Mono', monospace;
       color: #ffffff;
+      scroll-behavior: smooth;
     }
-
     a {
       text-decoration: none;
       color: inherit;
     }
-    
     header {
-      width: 100%;
-      height: 250px;
-      overflow: hidden;
-      display: block;
+      position: sticky;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #32292f;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+      z-index: 1000;
     }
-    
     header img {
-        width: 100%;
-        height: 150px;
-        object-fit: cover;
-        display: block;
+      height: 100px;
+      width: auto;
     }
-
+    .menu {
+      display: flex;
+      gap: 20px;
+    }
+    .menu a {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 24px;
+      color: #70ABAF;
+      transition: color 0.3s ease;
+    }
+    .menu a:hover {
+      color: #99E1D9;
+    }
     .visuals {
       display: flex;
       justify-content: center;
@@ -45,7 +52,6 @@
       gap: 20px;
       padding: 40px;
     }
-
     .poster {
       width: 160px;
       height: 520px;
@@ -54,17 +60,14 @@
       transition: transform 0.3s ease;
       overflow: hidden;
     }
-
     .poster:hover {
       transform: scale(1.05);
     }
-
     .poster img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
-
     .title {
       position: absolute;
       bottom: 10px;
@@ -76,131 +79,4 @@
       padding: 4px 8px;
       border-radius: 6px;
       opacity: 0;
-      transition: opacity 0.3s ease;
-      pointer-events: none;
-    }
-
-    .poster:hover .title {
-      opacity: 1;
-    }
-
-    .show-list {
-      max-width: 1000px;
-      margin: 40px auto 60px auto;
-      padding: 0 20px;
-      text-align: left;
-    }
-
-    .entry {
-      display: flex;
-      align-items: center;
-      margin-bottom: 40px;
-      margin-left: 30px;
-    }
-
-    .thumb {
-      width: 440px;
-      height: 500px;
-      object-fit: cover;
-      flex-shrink: 0;
-      display: block;
-      box-shadow: -10px 10px 0px #70ABAF;
-    }
-
-    .entry p {
-      font-size: 18px;
-      line-height: 1.6;
-      margin-left: 30px;
-    }
-
-    .entry span {
-      font-weight: bold;
-      color: #99E1D9;
-    }
-
-    @media (max-width: 600px) {
-      .entry {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .thumb {
-        margin-bottom: 10px;
-        margin-right: 0;
-        margin-left: 20px;
-      }
-
-      .entry p {
-        margin-left: 0;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <img src="hannahwatch.jpg.png" alt="Hannah's 2025 Watchlist">
-  </header>
-
-  <div class="visuals">
-    <a href="#demon">
-      <div class="poster">
-        <img src="Demon Slayer 1.jpg" alt="Demon Slayer">
-        <div class="title">Demon Slayer</div>
-      </div>
-    </a>
-    <a href="#one">
-      <div class="poster">
-        <img src="One piece 2.jpg" alt="One Piece">
-        <div class="title">One Piece</div>
-      </div>
-    </a>
-    <a href="#squid">
-      <div class="poster">
-        <img src="Squid Game.jpg" alt="Squid Game">
-        <div class="title">Squid Game</div>
-      </div>
-    </a>
-    <a href="#strange">
-      <div class="poster">
-        <img src="Stranger things 1.jpg" alt="Stranger Things">
-        <div class="title">Stranger Things</div>
-      </div>
-    </a>
-    <a href="#break">
-      <div class="poster">
-        <img src="Breaking Bad 1.jpg" alt="Breaking Bad">
-        <div class="title">Breaking Bad</div>
-      </div>
-    </a>
-  </div>
-
-  <div class="show-list">
-    <div class="entry" id="demon">
-      <img src="Demon Slayer 2.jpg" alt="Demon Slayer" class="thumb">
-      <p><span>Demon Slayer:</span> Tanjiro and Nezuko face powerful Upper Rank demons in the Swordsmith Village alongside Mist and Love Hashira.</p>
-    </div>
-    <div class="entry" id="one">
-      <img src="One piece 1.jpg" alt="One Piece" class="thumb">
-      <p><span>One Piece:</span> Monkey D. Luffy sails the Grand Line in search of the legendary treasure, battling foes with wild pirate energy.</p>
-    </div>
-    <div class="entry" id="squid">
-      <img src="squidgame2.jpg" alt="Squid Game" class="thumb">
-      <p><span>Squid Game:</span> Desperate contestants risk their lives in deadly children’s games for a massive cash prize in this psychological thriller.</p>
-    </div>
-    <div class="entry" id="strange">
-      <img src="STranger things 2.jpg" alt="Stranger Things" class="thumb">
-      <p><span>Stranger Things:</span> Supernatural forces turn small-town Indiana upside down as a group of kids uncover government secrets and monsters.</p>
-    </div>
-    <div class="entry" id="break">
-      <img src="Breaking Bad 2.jpg" alt="Breaking Bad" class="thumb">
-      <p><span>Breaking Bad:</span> A chemistry teacher becomes a ruthless drug kingpin in a gripping spiral of crime, family, and moral collapse.</p>
-    </div>
-  </div>
-
-</body>
-</html>
-
-
-
-
+      transition: opacity 0.3
